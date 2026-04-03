@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DigiHelp Hub - Soluções Digitais para Todos</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header / Navegação -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <i class="fas fa-hands-helping"></i>
+                <span>DigiHelp Hub</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Início</a></li>
+                <li><a href="#servicos">Serviços</a></li>
+                <li><a href="#planos">Planos</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+            <button class="btn-agendar-header" id="openModalBtn">
+                <i class="fas fa-calendar-check"></i> Agendar
+            </button>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Soluções Digitais <span class="highlight">Acessíveis</span> para Todos</h1>
+            <p>Suporte especializado em serviços governamentais, manutenção de computadores, assistência para idosos e muito mais. Atendimento 100% online ou presencial.</p>
+            <div class="hero-buttons">
+                <button class="btn-primary" id="heroAgendarBtn">
+                    <i class="fas fa-calendar-alt"></i> Agendar Agora
+                </button>
+                <a href="#servicos" class="btn-secondary">
+                    <i class="fas fa-chevron-down"></i> Conheça os Serviços
+                </a>
+            </div>
+        </div>
+        <div class="hero-stats">
+            <div class="stat">
+                <h3>+5.000</h3>
+                <p>Atendimentos</p>
+            </div>
+            <div class="stat">
+                <h3>98%</h3>
+                <p>Clientes Satisfeitos</p>
+            </div>
+            <div class="stat">
+                <h3>15min</h3>
+                <p>Tempo Médio</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Serviços Section -->
+    <section id="servicos" class="servicos">
+        <div class="container">
+            <div class="section-header">
+                <h2>Nossos Serviços</h2>
+                <p>Atendemos todas as suas necessidades digitais com excelência e rapidez</p>
+            </div>
+            <div class="servicos-grid">
+                <!-- Serviço 1 -->
+                <div class="servico-card" data-servico="governo">
+                    <div class="servico-icon">
+                        <i class="fas fa-landmark"></i>
+                    </div>
+                    <h3>Serviços Governamentais</h3>
+                    <p>Gov.br, INSS, Carteira de Trabalho, Imposto de Renda, CadÚnico e muito mais.</p>
+                    <span class="servico-preco">A partir de R$ 29,90</span>
+                    <button class="btn-agendar-servico" data-servico="Serviços Governamentais">Agendar</button>
+                </div>
+                <!-- Serviço 2 -->
+                <div class="servico-card" data-servico="suporte">
+                    <div class="servico-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3>Suporte Técnico</h3>
+                    <p>Formatação, remoção de vírus, instalação de software, recuperação de dados.</p>
+                    <span class="servico-preco">A partir de R$ 49,90</span>
+                    <button class="btn-agendar-servico" data-servico="Suporte Técnico">Agendar</button>
+                </div>
+                <!-- Serviço 3 -->
+                <div class="servico-card" data-servico="celular">
+                    <div class="servico-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Assistência para Celular</h3>
+                    <p>Backup WhatsApp, configuração inicial, transferência de dados, otimização.</p>
+                    <span class="servico-preco">A partir de R$ 19,90</span>
+                    <button class="btn-agendar-servico" data-servico="Assistência para Celular">Agendar</button>
+                </div>
+                <!-- Serviço 4 -->
+                <div class="servico-card" data-servico="grafica">
+                    <div class="servico-icon">
+                        <i class="fas fa-print"></i>
+                    </div>
+                    <h3>Serviços Gráficos</h3>
+                    <p>Impressão, digitalização, xerox, encadernação, envio para sua casa.</p>
+                    <span class="servico-preco">A partir de R$ 0,50/página</span>
+                    <button class="btn-agendar-servico" data-servico="Serviços Gráficos">Agendar</button>
+                </div>
+                <!-- Serviço 5 -->
+                <div class="servico-card" data-servico="idoso">
+                    <div class="servico-icon">
+                        <i class="fas fa-user-friends"></i>
+                    </div>
+                    <h3>Inclusão Digital para Idosos</h3>
+                    <p>Aulas particulares, teleassistência, configuração simplificada de celular.</p>
+                    <span class="servico-preco">A partir de R$ 39,90/mês</span>
+                    <button class="btn-agendar-servico" data-servico="Inclusão Digital para Idosos">Agendar</button>
+                </div>
+                <!-- Serviço 6 -->
+                <div class="servico-card" data-servico="empresas">
+                    <div class="servico-icon">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <h3>Suporte para MEIs e Empresas</h3>
+                    <p>DAS MEI, emissão de notas fiscais, suporte técnico empresarial.</p>
+                    <span class="servico-preco">A partir de R$ 79,90/mês</span>
+                    <button class="btn-agendar-servico" data-servico="Suporte para MEIs e Empresas">Agendar</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Planos de Assinatura Section -->
+    <section id="planos" class="planos">
+        <div class="container">
+            <div class="section-header">
+                <h2>Planos de Assinatura</h2>
+                <p>Escolha o plano ideal para suas necessidades</p>
+            </div>
+            <div class="planos-grid">
+                <div class="plano-card popular">
+                    <div class="plano-badge">Mais Escolhido</div>
+                    <h3>Plano Família</h3>
+                    <div class="preco">
+                        <span class="moeda">R$</span>
+                        <span class="valor">49,90</span>
+                        <span class="periodo">/mês</span>
+                    </div>
+                    <ul class="beneficios">
+                        <li><i class="fas fa-check"></i> 5 atendimentos mensais</li>
+                        <li><i class="fas fa-check"></i> Suporte via WhatsApp</li>
+                        <li><i class="fas fa-check"></i> Formatação com desconto</li>
+                        <li><i class="fas fa-check"></i> Prioridade no atendimento</li>
+                    </ul>
+                    <button class="btn-assinar" data-plano="Plano Família">Assinar Agora</button>
+                </div>
+                <div class="plano-card">
+                    <h3>Plano Idoso</h3>
+                    <div class="preco">
+                        <span class="moeda">R$</span>
+                        <span class="valor">39,90</span>
+                        <span class="periodo">/mês</span>
+                    </div>
+                    <ul class="beneficios">
+                        <li><i class="fas fa-check"></i> Suporte ilimitado</li>
+                        <li><i class="fas fa-check"></i> Videochamada com familiares</li>
+                        <li><i class="fas fa-check"></i> Configuração simplificada</li>
+                        <li><i class="fas fa-check"></i> Teleassistência 24h</li>
+                    </ul>
+                    <button class="btn-assinar" data-plano="Plano Idoso">Assinar Agora</button>
+                </div>
+                <div class="plano-card">
+                    <h3>Plano MEI</h3>
+                    <div class="preco">
+                        <span class="moeda">R$</span>
+                        <span class="valor">79,90</span>
+                        <span class="periodo">/mês</span>
+                    </div>
+                    <ul class="beneficios">
+                        <li><i class="fas fa-check"></i> Emissão de DAS mensal</li>
+                        <li><i class="fas fa-check"></i> Suporte técnico prioritário</li>
+                        <li><i class="fas fa-check"></i> Consultoria fiscal básica</li>
+                        <li><i class="fas fa-check"></i> Backup em nuvem</li>
+                    </ul>
+                    <button class="btn-assinar" data-plano="Plano MEI">Assinar Agora</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal de Agendamento -->
+    <div id="agendamentoModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2><i class="fas fa-calendar-check"></i> Agendamento de Serviço</h2>
+                <span class="close">&times;</span>
+            </div>
+            <div class="modal-body">
+                <form id="agendamentoForm">
+                    <div class="form-group">
+                        <label for="servico">Serviço *</label>
+                        <select id="servico" name="servico" required>
+                            <option value="">Selecione um serviço</option>
+                            <option value="Serviços Governamentais">Serviços Governamentais</option>
+                            <option value="Suporte Técnico">Suporte Técnico</option>
+                            <option value="Assistência para Celular">Assistência para Celular</option>
+                            <option value="Serviços Gráficos">Serviços Gráficos</option>
+                            <option value="Inclusão Digital para Idosos">Inclusão Digital para Idosos</option>
+                            <option value="Suporte para MEIs e Empresas">Suporte para MEIs e Empresas</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="nome">Nome Completo *</label>
+                        <input type="text" id="nome" name="nome" required placeholder="Digite seu nome completo">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">E-mail *</label>
+                        <input type="email" id="email" name="email" required placeholder="seu@email.com">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="telefone">WhatsApp *</label>
+                        <input type="tel" id="telefone" name="telefone" required placeholder="(11) 99999-9999">
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="data">Data *</label>
+                            <input type="date" id="data" name="data" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="hora">Horário *</label>
+                            <select id="hora" name="hora" required>
+                                <option value="">Selecione</option>
+                                <option value="09:00">09:00</option>
+                                <option value="10:00">10:00</option>
+                                <option value="11:00">11:00</option>
+                                <option value="13:00">13:00</option>
+                                <option value="14:00">14:00</option>
+                                <option value="15:00">15:00</option>
+                                <option value="16:00">16:00</option>
+                                <option value="17:00">17:00</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="tipoAtendimento">Tipo de Atendimento *</label>
+                        <select id="tipoAtendimento" name="tipoAtendimento" required>
+                            <option value="online">Online (WhatsApp/Videochamada)</option>
+                            <option value="presencial">Presencial</option>
+                            <option value="remoto">Remoto (Acesso via AnyDesk)</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="observacoes">Observações (opcional)</label>
+                        <textarea id="observacoes" name="observacoes" rows="3" placeholder="Descreva detalhes do serviço ou dúvidas..."></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-submit">
+                        <i class="fas fa-check-circle"></i> Confirmar Agendamento
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast de Confirmação -->
+    <div id="toast" class="toast">
+        <i class="fas fa-check-circle"></i>
+        <span id="toastMessage">Agendamento realizado com sucesso!</span>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-info">
+                <div class="logo">
+                    <i class="fas fa-hands-helping"></i>
+                    <span>DigiHelp Hub</span>
+                </div>
+                <p>Soluções digitais acessíveis para todos os públicos.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h4>Links Rápidos</h4>
+                <ul>
+                    <li><a href="#home">Início</a></li>
+                    <li><a href="#servicos">Serviços</a></li>
+                    <li><a href="#planos">Planos</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                </ul>
+            </div>
+            <div class="footer-contato">
+                <h4>Contato</h4>
+                <p><i class="fab fa-whatsapp"></i> (11) 99999-9999</p>
+                <p><i class="far fa-envelope"></i> contato@digihelphub.com.br</p>
+                <p><i class="far fa-clock"></i> Seg-Sex: 8h às 20h | Sáb: 9h às 14h</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 DigiHelp Hub - Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
